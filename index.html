@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cafe Barista: cafetería specialty con café de especialidad, repostería artesanal y los mejores horarios para visitarnos.">
+  <title>Cafe Barista | Café de especialidad</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera-contenido">
+      <a href="#inicio" class="logo">
+        <span class="logo-icono" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img" focusable="false">
+            <path d="M10 14h22v10a11 11 0 0 1-11 11 11 11 0 0 1-11-11V14Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M32 17h4a5 5 0 0 1 0 10h-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M17 8c0 3 3 3 3 6M25 8c0 3 3 3 3 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M8 38h32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-texto">Cafe <strong>Barista</strong></span>
+      </a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="#productos">Productos</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="contenedor hero-contenido">
+        <p class="hero-etiqueta">Café de especialidad · Tostado propio</p>
+        <h1>Un café bien hecho<br>te cambia el día</h1>
+        <p class="hero-texto">
+          Seleccionamos granos de origen, los tostamos cada semana y los preparamos
+          con la técnica que más te guste: espresso, filtro, cold brew o matcha.
+        </p>
+        <div class="hero-acciones">
+          <a href="#productos" class="boton boton-primario">Ver productos</a>
+          <a href="#contacto" class="boton boton-secundario">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-taza" aria-hidden="true">
+        <svg viewBox="0 0 240 240">
+          <circle cx="120" cy="120" r="110" fill="#f3e5d3" opacity=".55"/>
+          <circle cx="120" cy="120" r="84" fill="#6f4a2f" opacity=".9"/>
+          <circle cx="120" cy="120" r="70" fill="#3f2a1c"/>
+          <path d="M96 96c24 8 24 40 0 48" fill="none" stroke="#e8d5bd" stroke-width="6" stroke-linecap="round"/>
+          <path d="M120 74c0 10-10 10-10 20s10 10 10 20" fill="none" stroke="#e8d5bd" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+          <path d="M146 78c0 8-8 8-8 16s8 8 8 16" fill="none" stroke="#e8d5bd" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+        </svg>
+      </div>
+    </section>
+
+    <section id="productos" class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Nuestros productos</h2>
+        <p class="seccion-bajada">Del espresso intenso al matcha suave: todo se prepara al momento con leche de avena o entera.</p>
+
+        <div class="rejilla productos">
+
+          <article class="tarjeta">
+            <span class="producto-icono" aria-hidden="true">☕</span>
+            <h3>Espresso</h3>
+            <p>Doble carga de nuestro blend de la casa, con notas a cacao y caramelo.</p>
+            <p class="precio">$1.80</p>
+          </article>
+
+          <article class="tarjeta">
+            <span class="producto-icono" aria-hidden="true">🥛</span>
+            <h3>Capuchino</h3>
+            <p>Espresso, leche texturizada y espuma con arte en la taza.</p>
+            <p class="precio">$2.60</p>
+          </article>
+
+          <article class="tarjeta">
+            <span class="producto-icono" aria-hidden="true">🧋</span>
+            <h3>Latte</h3>
+            <p>Suave y cremoso, con el baño de la casa: canela o vainilla.</p>
+            <p class="precio">$2.90</p>
+          </article>
+
+          <article class="tarjeta">
+            <span class="producto-icono" aria-hidden="true">🍵</span>
+            <h3>Matcha Latte</h3>
+            <p>Matcha ceremonial de JAVA con leche de avena, sin azúcar añadido.</p>
+            <p class="precio">$3.20</p>
+          </article>
+
+          <article class="tarjeta">
+            <span class="producto-icono" aria-hidden="true">🥐</span>
+            <h3>Croissant</h3>
+            <p>Horneado cada mañana con mantequilla francesa y un relleno floral.</p>
+            <p class="precio">$2.10</p>
+          </article>
+
+          <article class="tarjeta">
+            <span class="producto-icono" aria-hidden="true">🍫</span>
+            <h3>Brownie</h3>
+            <p>Chocolate 70 % y nueces caramelizadas, corte húmedo.</p>
+            <p class="precio">$2.40</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="horarios" class="seccion seccion-alterna">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Horarios de atención</h2>
+        <p class="seccion-bajada">Abrimos todos los días. Los fines de semana alargamos el desayuno hasta las 13:00.</p>
+
+        <div class="horarios">
+          <ul class="horarios-lista">
+            <li><span>Lunes</span><span>07:30 – 19:00</span></li>
+            <li><span>Martes</span><span>07:30 – 19:00</span></li>
+            <li><span>Miércoles</span><span>07:30 – 19:00</span></li>
+            <li><span>Jueves</span><span>07:30 – 20:00</span></li>
+            <li><span>Viernes</span><span>07:30 – 21:00</span></li>
+            <li><span>Sábado</span><span>08:00 – 21:00</span></li>
+            <li><span>Domingo</span><span>08:00 – 13:00</span></li>
+          </ul>
+
+          <aside class="horarios-datos">
+            <h3>Buenos días ☀</h3>
+            <p>De lunes a miércoles, todo el café filtrado y los lattes con 15 % de descuento antes de las 10:00.</p>
+            <p>Reservas para grupos y eventos: escríbenos al <a href="mailto:reservas@cafebarista.com">correo</a>.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Contacto</h2>
+        <p class="seccion-bajada">Te esperamos en el centro. Si necesitas algo, llámanos o escríbenos.</p>
+
+        <div class="rejilla contacto">
+          <article class="tarjeta contacto-tarjeta">
+            <span class="producto-icono" aria-hidden="true">📍</span>
+            <h3>Dirección</h3>
+            <p>Av. Reforma 245, Local 3<br>Col. Centro, Ciudad de México</p>
+          </article>
+
+          <article class="tarjeta contacto-tarjeta">
+            <span class="producto-icono" aria-hidden="true">📞</span>
+            <h3>Teléfono</h3>
+            <p><a href="tel:+525512345678">+52 55 1234 5678</a></p>
+          </article>
+
+          <article class="tarjeta contacto-tarjeta">
+            <span class="producto-icono" aria-hidden="true">✉️</span>
+            <h3>Correo</h3>
+            <p><a href="mailto:hola@cafebarista.com">hola@cafebarista.com</a></p>
+          </article>
+
+          <article class="tarjeta contacto-tarjeta">
+            <span class="producto-icono" aria-hidden="true">📱</span>
+            <h3>Redes</h3>
+            <p>@cafebarista<br>Instagram · TikTok</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-contenido">
+      <p><strong>Cafe Barista</strong> · Café de especialidad desde 2018</p>
+      <p>© 2026 Cafe Barista — Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+</body>
+</html>
