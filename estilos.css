@@ -241,6 +241,35 @@ a:hover {
   font-size: 1.05rem !important;
 }
 
+/* ---------------- Promociones ---------------- */
+
+.seccion-promociones {
+  background: linear-gradient(180deg, #fff8ee 0%, var(--crema) 100%);
+  border-bottom: 1px solid var(--crema-oscura);
+}
+
+.promociones {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.promo {
+  position: relative;
+  border-top: 4px solid var(--acento);
+}
+
+.promo-etiqueta {
+  display: inline-block;
+  background-color: var(--cafe-medio);
+  color: var(--blanco);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
 /* ---------------- Horarios ---------------- */
 
 .horarios {
