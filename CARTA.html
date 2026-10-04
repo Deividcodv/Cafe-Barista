@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Carta — Proyecto Cafe Barista</title><style>
+@page { size: A4; margin: 16mm 15mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #2f2219; line-height: 1.6; margin: 0 auto; max-width: 190mm;
+  font-size: 11.5pt;
+}
+h1, h2, h3 { font-family: Georgia, serif; color: #241309; }
+h1 { font-size: 26pt; margin: 0 0 6mm; }
+h2 {
+  font-size: 16pt; margin: 10mm 0 3mm; padding-bottom: 2mm;
+  border-bottom: 2px solid #d4813c;
+}
+h3 { font-size: 13pt; margin: 7mm 0 2mm; color: #6f4a2f; }
+p { margin: 0 0 3mm; text-align: justify; }
+ul { margin: 0 0 3mm 6mm; }
+li { margin-bottom: 1.5mm; }
+a { color: #6f4a2f; }
+code {
+  font-family: Consolas, "Courier New", monospace; font-size: 9.5pt;
+  background: #f0e4d3; padding: 1px 4px; border-radius: 4px;
+}
+pre {
+  background: #1e1e1e; color: #d4d4d4; padding: 4mm; border-radius: 3mm;
+  font-family: Consolas, "Courier New", monospace; font-size: 8.6pt;
+  line-height: 1.45; overflow-x: hidden; white-space: pre-wrap;
+  page-break-inside: avoid;
+}
+pre code { background: none; color: #d4d4d4; padding: 0; font-size: 8.6pt; }
+table { border-collapse: collapse; width: 100%; margin: 0 0 4mm; font-size: 10pt; }
+th, td { border: 1px solid #d9c8b2; padding: 2mm 2.5mm; text-align: left; vertical-align: top; }
+th { background: #6f4a2f; color: #fff; font-family: "Segoe UI", Arial, sans-serif; font-size: 9.5pt; }
+tr:nth-child(even) td { background: #faf6ef; }
+img {
+  display: block; max-width: 100%; border: 1px solid #d9c8b2;
+  border-radius: 2mm; margin: 0 auto 2mm; page-break-inside: avoid;
+}
+img.alta { max-height: 225mm; width: auto; }
+hr { border: none; border-top: 1px solid #d9c8b2; margin: 6mm 0; }
+figure { margin: 0 0 5mm; page-break-inside: avoid; }
+.caja-datos {
+  background: #faf6ef; border-left: 4px solid #d4813c;
+  padding: 4mm 5mm; margin: 0 0 6mm; font-size: 10.5pt;
+}
+.caja-datos p { margin: 0 0 1.5mm; }
+.portada { text-align: center; padding-top: 30mm; page-break-after: always; }
+.portada .sub { color: #6f4a2f; letter-spacing: 3px; text-transform: uppercase; font-size: 10pt; }
+.portada .linea { width: 60mm; height: 3px; background: #d4813c; margin: 6mm auto; }
+.rotulo {
+  font-family: "Segoe UI", Arial, sans-serif; font-size: 9pt;
+  color: #6f4a2f; text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 1mm;
+}
+</style></head><body><p><strong>Materia:</strong> GIT y GitHub</p>
+<p><strong>Alumno:</strong> David (Deividcodv)</p>
+<p><strong>Correo:</strong> davivasquez02@gmail.com</p>
+<p><strong>Repositorio:</strong> https://github.com/Deividcodv/Cafe-Barista</p>
+<p><strong>Fecha:</strong> 4 de octubre de 2026</p>
+<hr>
+ 
+<h2>1. Introducción</h2>
+<p>La cafetería <strong>Cafe Barista</strong> necesita una presencia en internet sencilla que le permita mostrar su carta de productos, sus horarios de atención y sus datos de contacto. El presente proyecto consistió en construir esa página web con HTML y CSS, y en publicarla en GitHub siguiendo un flujo de trabajo profesional con Git: control de versiones, ramas de trabajo, <em>commits</em> pequeños y descriptivos, <em>push</em> al repositorio remoto, Pull Requests y <em>merge</em> a la rama principal <code>master</code>.</p>
+<p>La elección de GitHub como plataforma no es casual: el repositorio funciona como bitácora digital del proyecto. Cada cambio quedó registrado con su autor, su fecha y su motivo, lo que permite auditar la evolución del sitio y volver a cualquier versión anterior. Además, el uso de ramas y Pull Requests permite trabajar en features sin romper la versión que los usuarios ya están viendo, que es exactamente el flujo que sigue un equipo real de desarrollo web.</p>
+<p><strong>Objetivo general:</strong> desarrollar y publicar la página de Cafe Barista en GitHub aplicando un flujo de trabajo basado en ramas, <em>commits</em> y Pull Requests.</p>
+<p><strong>Objetivos específicos:</strong></p>
+<p>1. Crear la estructura del proyecto con <code>index.html</code> y <code>estilos.css</code>.</p>
+<p>2. Inicializar el repositorio de Git y registrar un primer <em>commit</em>.</p>
+<p>3. Crear el repositorio en GitHub y subir el proyecto.</p>
+<p>4. Agregar una sección de promociones en una rama <code>promociones</code>, con al menos dos <em>commits</em>, y fusionarla mediante un Pull Request.</p>
+<p>5. Realizar dos mejoras visuales en una rama <code>mejorar-diseño</code>, repetir el flujo <em>commit → push → PR → merge</em>.</p>
+<p>6. Documentar todo el proceso con evidencia gráfica.</p>
+<p><strong>Justificación de las herramientas.</strong> Se eligió HTML5 semántico y CSS3 puro porque no requieren instalación, funcionan en cualquier navegador y son los estándares para páginas estáticas. Se descartó un framework como Bootstrap para demostrar el uso propio de <code>flexbox</code>, <code>grid</code>, variables CSS y <em>media queries</em>, que son los recursos que una cafetería pequeña necesitaría mantener por sí misma.</p>
+<hr>
+ 
+<h2>2. Contenido</h2>
+ 
+<h3>2.1 Estructura del proyecto</h3>
+<pre><code>Cafe-Barista/
+├── index.html        (215 líneas) — estructura y contenido de la página
+├── estilos.css       (545 líneas) — diseño, responsividad y animaciones
+├── capturas/         (22 imágenes)  — evidencia gráfica del proceso
+├── CARTA.md          — este documento
+├── CARTA.pdf         — versión impresa de la carta
+└── CARTA.html        — versión maquetada usada para generar el PDF</code></pre>
+ 
+<h3>2.2 Contenido de la página</h3>
+<p>La página está organizada en cinco bloques, navegables desde el menú superior:</p>
+<table><thead><tr><th>Sección</th><th>Contenido</th></tr></thead><tbody><tr><td><strong>Hero</strong></td><td>Nombre de la cafetería, eslogan y dos botones de llamada a la acción (Ver productos / Cómo llegar).</td></tr><tr><td><strong>Productos</strong></td><td>Seis artículos con nombre, descripción y precio: Espresso, Capuchino, Latte, Matcha Latte, Croissant y Brownie.</td></tr><tr><td><strong>Promociones</strong></td><td>Tres tarjetas de oferta: 2×1 en café filtrado, Combo Barista Breakfast y 15 % en grupos de 6.</td></tr><tr><td><strong>Horarios</strong></td><td>Tabla de lunes a domingo con el horario de apertura y cierre, más un bloque informativo sobre los descuentos de las mañanas.</td></tr><tr><td><strong>Contacto</strong></td><td>Dirección, teléfono, correo electrónico y redes sociales, además del pie de página con los datos de la cafetería.</td></tr></tbody></table>
+<p>Aspectos técnicos del HTML: se declara el atributo <code>lang=&quot;es&quot;</code>, se emplean elementos semánticos (<code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>aside</code>, <code>footer</code>), cada sección tiene su <code>id</code> para poder enlazarla desde el menú, y las imágenes son SVG o emoji decorativos con <code>aria-hidden</code> para no interferir con los lectores de pantalla.</p>
+ 
+<h3>2.3 Decisiones técnicas del CSS</h3>
+<ul><li><strong>Variables CSS</strong> (<code>:root</code>) para centralizar colores, radios, sombras y tipografías. Cambiar la identidad visual del sitio requiere modificar una sola línea.</li><li><strong><code>grid</code> y <code>flexbox</code></strong> para la distribución: rejilla de productos y contacto, barra de horarios en dos columnas y hero en dos columnas.</li><li><strong>Responsividad</strong> con dos <code>media queries</code> (900 px y 640 px): en móvil las columnas se apilan, el menú se centra y la ilustración del hero se oculta.</li><li><strong>Sin dependencias externas.</strong> Las tipografías son pilas del sistema y todas las ilustraciones son SVG o CSS, de modo que la página se ve igual sin conexión a internet.</li><li><strong>Animaciones con criterio</strong>: transiciones de 0.25 s, elevación de tarjetas al pasar el cursor y subrayado del menú que crece desde el centro.</li><li><strong>Accesibilidad</strong>: <code>:focus-visible</code> para navegación por teclado, <code>prefers-reduced-motion</code> para respetar a quien desactivó las animaciones y <code>scroll-margin-top</code> para que el menú fijo no tape los títulos.</li></ul>
+ 
+<h3>2.4 Flujo de trabajo con Git</h3>
+<p>El trabajo se organizó en cuatro momentos, todos sobre la rama <code>master</code>:</p>
+<table><thead><tr><th>Paso</th><th>Acción</th><th>Resultado</th></tr></thead><tbody><tr><td>1</td><td><code>git init -b master</code> + primer <code>commit</code></td><td>Repositorio local con <code>a43f8dd</code></td></tr><tr><td>2</td><td><code>gh repo create --public --push</code></td><td>Repositorio <code>Deividcodv/Cafe-Barista</code></td></tr><tr><td>3</td><td>Rama <code>promociones</code> → 2 <code>commit</code> → <em>push</em> → PR #1 → <em>merge</em></td><td>Sección de promociones en producción</td></tr><tr><td>4</td><td>Rama <code>mejorar-diseño</code> → 2 <code>commit</code> → <em>push</em> → PR #2 → <em>merge</em></td><td>Dos mejoras visuales en producción</td></tr></tbody></table>
+<p>Las tres ramas quedaron publicadas en GitHub: <code>master</code> (versión final), <code>promociones</code> (con la sección de ofertas) y <code>mejorar-diseño</code> (con las mejoras de diseño). Se conservaron después del <em>merge</em> para que quede evidencia del proceso.</p>
+ 
+<h3>2.5 Historial de commits</h3>
+<pre><code>*   0fca0b6 Merge pull request #2 from Deividcodv/mejorar-diseno
+|\
+| * cc66cff style: agrega animaciones, transiciones y mejoras de accesibilidad
+| * ce05d69 style: renueva la tipografia, la paleta y el hero a dos columnas
+|/
+*   7ebb1ac Merge pull request #1 from Deividcodv/promociones
+|\
+| * 2812a2d style: estiliza las tarjetas de promociones y aclara sus condiciones en horarios
+| * 0b8c86f feat: agrega la seccion de promociones al inicio de la pagina
+|/
+* a43f8dd chore: inicializa el proyecto Cafe Barista con index.html y estilos.css</code></pre>
+<table><thead><tr><th>Commit</th><th>Rama</th><th>Descripción</th></tr></thead><tbody><tr><td><code>a43f8dd</code></td><td>master</td><td>Commit inicial: <code>index.html</code> y <code>estilos.css</code></td></tr><tr><td><code>0b8c86f</code></td><td>promociones</td><td>Sección de promociones en el HTML (3 ofertas + enlace en el menú)</td></tr><tr><td><code>2812a2d</code></td><td>promociones</td><td>Estilos de las tarjetas de promociones y nota de no acumulabilidad</td></tr><tr><td><code>7ebb1ac</code></td><td>master</td><td><strong>Merge del PR #1</strong></td></tr><tr><td><code>ce05d69</code></td><td>mejorar-diseño</td><td>Mejora 1: tipografía serif, paleta cálida y hero a dos columnas</td></tr><tr><td><code>cc66cff</code></td><td>mejorar-diseño</td><td>Mejora 2: animaciones, transiciones y accesibilidad</td></tr><tr><td><code>0fca0b6</code></td><td>master</td><td><strong>Merge del PR #2</strong></td></tr></tbody></table>
+<p>Los mensajes siguen la convención de <em>Conventional Commits</em> (<code>feat:</code>, <code>style:</code>, <code>chore:</code>), lo que permite saber de un vistazo si un cambio agrega funcionalidad, modifica estilos o configura el proyecto.</p>
+ 
+<h3>2.6 Pull Requests</h3>
+<table><thead><tr><th>PR</th><th>Título</th><th>Rama origen</th><th>Cambios</th><th>Estado</th></tr></thead><tbody><tr><td><a href="https://github.com/Deividcodv/Cafe-Barista/pull/1">#1</a></td><td>feat: agrega la seccion de promociones</td><td><code>promociones</code></td><td>64 líneas agregadas, 2 eliminadas, 2 archivos</td><td><strong>Fusionado</strong> el 04/10/2026</td></tr><tr><td><a href="https://github.com/Deividcodv/Cafe-Barista/pull/2">#2</a></td><td>style: dos mejoras visuales para la pagina</td><td><code>mejorar-diseño</code></td><td>203 líneas agregadas, 39 eliminadas, 1 archivo</td><td><strong>Fusionado</strong> el 04/10/2026</td></tr></tbody></table>
+<p>Cada Pull Request se creó con <code>gh pr create</code> incluyendo una descripción con el detalle de los cambios, se verificó con <code>gh pr view</code> que GitHub lo marcaba como <code>MERGEABLE</code> (sin conflictos) y se integró con <code>gh pr merge --merge</code>, que genera un <em>commit</em> de fusión y conserva el historial completo de la rama.</p>
+<hr>
+ 
+<h2>3. Capturas de pantalla</h2>
+ 
+<h3>3.1 La página web</h3>
+<p><strong>Figura 1. Vista completa de la página en escritorio (1351 × 3665 px).</strong></p>
+<p>Se observan las cinco secciones en orden: hero, productos, promociones, horarios, contacto y pie de página.</p>
+<figure><img src="capturas/01-sitio-completo-escritorio.png" alt="Vista completa del sitio"><p class="rotulo">sitio completo escritorio</p></figure>
+<p><strong>Figura 2. Cabecera y hero.</strong> El menú fijo con cuatro enlaces, el logotipo con SVG de taza, el eslogan y los dos botones de llamada a la acción, junto a la ilustración de la taza que en la rama <code>mejorar-diseño</code> pasó a estar en una columna propia.</p>
+<figure><img src="capturas/02-sitio-hero.png" alt="Cabecera y hero"><p class="rotulo">sitio hero</p></figure>
+<p><strong>Figura 3. Sección de productos.</strong> Rejilla de seis tarjetas con icono, nombre, descripción y precio.</p>
+<figure><img src="capturas/03-sitio-productos.png" alt="Sección de productos"><p class="rotulo">sitio productos</p></figure>
+<p><strong>Figura 4. Sección de promociones.</strong> Las tres ofertas agregadas en el PR #1, con su etiqueta superior y el precio destacado en color de acento.</p>
+<figure><img src="capturas/04-sitio-promociones.png" alt="Sección de promociones"><p class="rotulo">sitio promociones</p></figure>
+<p><strong>Figura 5. Sección de horarios.</strong> Tabla de lunes a domingo con franjas alternas y, al lado, el bloque informativo del descuento de mañanas.</p>
+<figure><img src="capturas/05-sitio-horarios.png" alt="Sección de horarios"><p class="rotulo">sitio horarios</p></figure>
+<p><strong>Figura 6. Sección de contacto y pie de página.</strong> Dirección, teléfono, correo y redes sociales.</p>
+<figure><img src="capturas/06-sitio-contacto-y-pie.png" alt="Sección de contacto y pie"><p class="rotulo">sitio contacto y pie</p></figure>
+<p><strong>Figura 7. Vista en móvil (390 px de ancho).</strong> Todas las columnas se apilan en una sola, el menú se centra y la ilustración del hero se oculta: así se comporta la página en un teléfono.</p>
+<figure><img src="capturas/07-sitio-movil-390px.png" alt="Vista móvil completa" class="alta"><p class="rotulo">sitio movil 390px</p></figure>
+<p><strong>Figura 8. Promociones en móvil.</strong> Detalle de las tarjetas de ofertas apiladas en una columna, resultado de la regla <code>@media</code> de 640 px.</p>
+<figure><img src="capturas/08-sitio-movil-promociones.png" alt="Promociones en móvil"><p class="rotulo">sitio movil promociones</p></figure>
+ 
+<h3>3.2 El repositorio en GitHub</h3>
+<p><strong>Figura 9. Portada del repositorio</strong> <code>Deividcodv/Cafe-Barista</code>, creado como público desde la terminal con <code>gh repo create</code>.</p>
+<figure><img src="capturas/09-github-portada.png" alt="Portada del repositorio"><p class="rotulo">github portada</p></figure>
+<p><strong>Figura 10. Historial de commits de <code>master</code>.</strong> Se ven los siete commits, incluidos los dos <em>merge</em> de los Pull Requests.</p>
+<figure><img src="capturas/10-github-commits-master.png" alt="Historial de commits"><p class="rotulo">github commits master</p></figure>
+<p><strong>Figura 11. Lista de ramas.</strong> Las tres ramas del proyecto: <code>master</code>, <code>mejorar-diseño</code> y <code>promociones</code>.</p>
+<figure><img src="capturas/11-github-ramas.png" alt="Lista de ramas"><p class="rotulo">github ramas</p></figure>
+ 
+<h3>3.3 Pull Request #1 — Secciones de promociones</h3>
+<p><strong>Figura 12. PR #1 en conversación.</strong> Título, descripción de los cambios, lista de <em>commits</em> y el indicador de que fue fusionado a <code>master</code>.</p>
+<figure><img src="capturas/12-github-pr1-promociones.png" alt="PR #1 conversación"><p class="rotulo">github pr1 promociones</p></figure>
+<p><strong>Figura 13. PR #1, archivos modificados.</strong> El diff de <code>index.html</code> y <code>estilos.css</code> con las líneas agregadas en verde.</p>
+<figure><img src="capturas/13-github-pr1-archivos.png" alt="PR #1 archivos"><p class="rotulo">github pr1 archivos</p></figure>
+ 
+<h3>3.4 Pull Request #2 — Mejoras de diseño</h3>
+<p><strong>Figura 14. PR #2 en conversación.</strong> Detalle de las dos mejoras visuales y de accesibilidad aplicadas.</p>
+<figure><img src="capturas/14-github-pr2-diseno.png" alt="PR #2 conversación"><p class="rotulo">github pr2 diseno</p></figure>
+<p><strong>Figura 15. PR #2, archivos modificados.</strong> Diff completo de <code>estilos.css</code> (203 líneas agregadas, 39 eliminadas).</p>
+<figure><img src="capturas/15-github-pr2-archivos.png" alt="PR #2 archivos"><p class="rotulo">github pr2 archivos</p></figure>
+<p><strong>Figura 16. Commit de fusión del PR #2</strong> (<code>0fca0b6</code>), que incorpora a <code>master</code> los dos commits de la rama <code>mejorar-diseño</code>.</p>
+<figure><img src="capturas/16-github-commit-merge.png" alt="Commit de fusión"><p class="rotulo">github commit merge</p></figure>
+ 
+<h3>3.5 Evidencia de la terminal</h3>
+<p><strong>Figura 17. Inicialización del repositorio y commit inicial.</strong> <code>git init -b master</code>, <code>git add .</code> y el primer <code>commit</code> que crea <code>index.html</code> y <code>estilos.css</code>.</p>
+<figure><img src="capturas/17-terminal-1-init-y-commit.png" alt="Terminal: init y commit"><p class="rotulo">terminal 1 init y commit</p></figure>
+<p><strong>Figura 18. Creación del repositorio en GitHub.</strong> <code>gh repo create --public --source=. --remote=origin --push</code> y la rama <code>master</code> siguiendo al remoto.</p>
+<figure><img src="capturas/18-terminal-2-crear-repo-github.png" alt="Terminal: creación del repo"><p class="rotulo">terminal 2 crear repo github</p></figure>
+<p><strong>Figura 19. Rama <code>promociones</code>.</strong> <code>git checkout -b promociones</code>, los dos <em>commits</em> de la sección y el <code>push</code> de la rama.</p>
+<figure><img src="capturas/19-terminal-3-rama-promociones.png" alt="Terminal: rama promociones"><p class="rotulo">terminal 3 rama promociones</p></figure>
+<p><strong>Figura 20. Pull Request #1 y su fusión.</strong> Creación del PR, verificación <code>MERGEABLE</code>, <code>gh pr merge 1 --merge</code> y el grafo de <code>master</code> después del <em>merge</em>.</p>
+<figure><img src="capturas/20-terminal-4-pr1-merge.png" alt="Terminal: PR #1 y merge"><p class="rotulo">terminal 4 pr1 merge</p></figure>
+<p><strong>Figura 21. Rama <code>mejorar-diseño</code>.</strong> Los dos <em>commits</em> de mejoras visuales, el <code>push</code> y la creación del PR #2.</p>
+<figure><img src="capturas/21-terminal-5-rama-mejorar-diseno.png" alt="Terminal: rama mejorar-diseño"><p class="rotulo">terminal 5 rama mejorar diseno</p></figure>
+<p><strong>Figura 22. Pull Request #2, fusión y estado final.</strong> Fusión, <code>git pull</code> de <code>master</code>, grafo completo del proyecto y listado de ramas locales y remotas.</p>
+<figure><img src="capturas/22-terminal-6-pr2-merge-y-estado-final.png" alt="Terminal: PR #2 y estado final"><p class="rotulo">terminal 6 pr2 merge y estado final</p></figure>
+<hr>
+ 
+<h2>4. Conclusión</h2>
+<p>El proyecto se completó con éxito y cumple los seis objetivos propuestos. La página de <strong>Cafe Barista</strong> está publicada y accesible en abierto en https://github.com/Deividcodv/Cafe-Barista, muestra los productos con sus precios, los horarios de toda la semana, las promociones vigentes y los datos de contacto, y funciona correctamente tanto en computadora como en teléfono.</p>
+<p>Lo que más aprendí fue la diferencia entre «guardar archivos» y «versionar un proyecto». Commitear con mensajes descriptivos y separados en cambios pequeños hace que el historial se lea solo: cualquiera puede entender qué se hizo, cuándo y por qué. Crear un proyecto directamente sobre <code>master</code> habría funcionado igual, pero cualquier error había que deshacerlo a mano; con ramas y Pull Requests el error queda aislado, se revisa antes de integrar y <code>master</code> siempre tuvo una versión que funcionaba.</p>
+<p>También comprobó que GitHub sirve como algo más que un alojamiento: el Pull Request funciona como un lugar donde se documenta y se revisa el trabajo antes de publicarlo, y las ramas permiten mantener varias líneas de trabajo en paralelo.</p>
+<p>Como mejora futura, el paso natural sería convertir el sitio en una página dinámica (por ejemplo con JavaScript o un CMS) para que la cafetería pueda actualizar sus promociones y productos sin tocar el código. También se podrían agregar más imágenes reales, una sección de reseñas de clientes y una versión en el menú que mida el tamaño de cada producto.</p>
+<hr>
+<p style="font-style:italic;color:#6f4a2f">Documento generado el 4 de octubre de 2026. Repositorio: https://github.com/Deividcodv/Cafe-Barista</p></body></html>
