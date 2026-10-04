@@ -445,3 +445,101 @@ a:hover {
     font-size: 1.8rem;
   }
 }
+
+/* ============================================================
+   Mejora 2 — interacciones, animaciones y accesibilidad
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* La cabecera es fija: sin esto los enlaces internos quedan ocultos */
+section,
+footer {
+  scroll-margin-top: 92px;
+}
+
+.boton,
+.tarjeta,
+.navegacion a,
+.promo-etiqueta,
+.horarios-lista li {
+  transition: transform .25s ease, box-shadow .25s ease,
+              background-color .25s ease, color .25s ease,
+              border-color .25s ease;
+}
+
+.boton-primario:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(212, 129, 60, .40);
+}
+
+.boton-secundario:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, .18);
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  border-top-color: var(--acento);
+  box-shadow: var(--sombra-alta);
+}
+
+.promo:hover {
+  border-top-color: var(--cafe-medio);
+}
+
+.promo-etiqueta:hover {
+  background-color: var(--cafe-oscuro);
+}
+
+/* Subrayado que crece desde el centro en el menu */
+.navegacion a {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navegacion a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--acento);
+  transform: translateX(-50%);
+  transition: width .25s ease;
+}
+
+.navegacion a:hover::after,
+.navegacion a:focus-visible::after {
+  width: 100%;
+}
+
+/* Foco visible para navegacion por teclado */
+:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Respeta a quien pidio menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .tarjeta:hover,
+  .boton-primario:hover,
+  .boton-secundario:hover {
+    transform: none;
+  }
+}
